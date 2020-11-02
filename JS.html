@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  
+<script>
+class Language {
+  constructor(langname) {
+    this.type = langname;
+  }
+
+  represent() {
+    return  this.type;
+  }
+}
+
+class Framework extends Language {
+  constructor(langname, frame) {
+    super(langname);
+    this.framework = frame;
+  }  
+  out() {
+    return this.framework + ' is a ' + this.represent() + ' framework. '
+  }
+}
+
+mylanguage = new Framework("JavaScript", "Vue.js");
+document.write(mylanguage.out());
+</script>
+
+</body>
+</html>
