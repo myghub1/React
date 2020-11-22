@@ -5,28 +5,32 @@
   
 <script>
 class Language {
-  constructor(langname) {
-    this.type = langname;
+  constructor(name) {
+    this.language = name;
   }
 
   represent() {
-    return  this.type;
+    return this.language;
   }
 }
 
 class Framework extends Language {
-  constructor(langname, frame) {
-    super(langname);
-    this.framework = frame;
+  constructor(name, fwork) {
+    super(name);
+    this.framework = fwork;
   }  
   out() {
-    return this.framework + ' is a ' + this.represent() + ' framework. '
+    return this.framework + ' - The Progressive ' + this.represent() + ' Framework.'
   }
 }
 
-mylanguage = new Framework("JavaScript", "Vue.js");
+mylanguage = new Framework("JS", "Vue.js");
 document.write(mylanguage.out());
 </script>
 
 </body>
 </html>
+
+
+
+
