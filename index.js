@@ -1,6 +1,15 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const firstelement = <h2>Hello!</h2>
+class Sky extends React.Component {
+  constructor() {
+    super();
+    this.state = {color: "blue"};
+  }
+  render() {
+    return <h3>The sky is {this.state.color}.</h3>;
+  }
+}
 
-ReactDOM.render(firstelement, document.getElementById('demo'));
+ReactDOM.render(<Sky />, document.getElementById('root'));
